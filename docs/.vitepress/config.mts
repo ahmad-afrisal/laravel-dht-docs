@@ -8,15 +8,18 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
     ],
 
     sidebar: [
       {
         text: 'Examples',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Tools', link: '/tools' },
+          { text: 'Instal Breeze', link: '/instal-breeze' },
+          { text: 'Instal Yajra Datatables', link: '/instal-yajra-datatables' },
+          { text: 'Instal Spatie Permissions', link: '/instal-spatie-permissions' },
+          { text: 'Buat Hak Akses', link: '/make-roles' },
+          { text: 'Buat Pengguna', link: '/make-users' }
         ]
       }
     ],

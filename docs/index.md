@@ -5,14 +5,12 @@ layout: home
 hero:
   name: "Laravel 13 DHT"
   text: "The Next of IoT"
-  tagline: My great project tagline
+  tagline: Topik Khusus IOT 2026
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Mulai
+      link: /tools
+
 
 features:
   - title: Feature A
