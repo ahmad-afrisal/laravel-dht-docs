@@ -20,7 +20,8 @@ export default defineConfig({
           { text: 'Instal Spatie Permissions', link: '/instal-spatie-permissions' },
           { text: 'Buat Hak Akses', link: '/make-roles' },
           { text: 'Buat Pengguna', link: '/make-users' },
-          { text: 'Instal Debugbar', link: '/instal-debugbar' }
+          { text: 'Instal Debugbar', link: '/instal-debugbar' },
+          { text: 'Menampilkan Pengguna', link: '/admin-view-user' },
         ]
       }
     ],

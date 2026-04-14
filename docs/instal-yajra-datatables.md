@@ -4,8 +4,15 @@
 Buka terminal VS Code, dan Jalankan Perintah :
 `composer require yajra/laravel-datatables-oracle:"^13.0"`
 
+![Deskripsi Gambar](/images/yajra-0.png)
+
+
 Setelah berhasil terdownload, Jalankan perintah ini:
 `php artisan vendor:publish --tag=datatables`
+
+
+![Deskripsi Gambar](/images/yajra-01.png)
+
 
 ## Modifikasi file `app.blade.php`
 
