@@ -19,7 +19,8 @@ export default defineConfig({
           { text: 'Instal Yajra Datatables', link: '/instal-yajra-datatables' },
           { text: 'Instal Spatie Permissions', link: '/instal-spatie-permissions' },
           { text: 'Buat Hak Akses', link: '/make-roles' },
-          { text: 'Buat Pengguna', link: '/make-users' }
+          { text: 'Buat Pengguna', link: '/make-users' },
+          { text: 'Instal Debugbar', link: '/instal-debugbar' }
         ]
       }
     ],
