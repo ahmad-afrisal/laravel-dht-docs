@@ -22,6 +22,7 @@ export default defineConfig({
           { text: 'Buat Pengguna', link: '/make-users' },
           { text: 'Instal Debugbar', link: '/instal-debugbar' },
           { text: 'Menampilkan Pengguna', link: '/admin-view-user' },
+          { text: 'Set Default User Role', link: '/set-default-user-role' },
         ]
       }
     ],
