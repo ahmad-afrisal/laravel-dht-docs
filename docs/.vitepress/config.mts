@@ -12,7 +12,8 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Pertemuan 1 - 10/04/2026',
+        collapsed: false,
         items: [
           { text: 'Tools', link: '/tools' },
           { text: 'Instal Breeze', link: '/instal-breeze' },
@@ -24,7 +25,16 @@ export default defineConfig({
           { text: 'Menampilkan Pengguna', link: '/admin-view-user' },
           { text: 'Set Default User Role', link: '/set-default-user-role' },
           { text: 'CRUD IoT Device', link: '/crud-iot-device' },
-        ]
+        ],
+      },
+      {
+        text: 'Pertemuan 2 - 17/04/2026',
+        collapsed: false,
+        items: [
+          { text: 'Menampilkan Perangkat Saya', link: '/my-iot-device' },
+          { text: 'Integrasi MQTT', link: '/mqtt-setup' },
+          // Tambahkan item Part 2 di sini
+        ],
       }
     ],
 
