@@ -23,6 +23,7 @@ export default defineConfig({
           { text: 'Instal Debugbar', link: '/instal-debugbar' },
           { text: 'Menampilkan Pengguna', link: '/admin-view-user' },
           { text: 'Set Default User Role', link: '/set-default-user-role' },
+          { text: 'CRUD IoT Device', link: '/crud-iot-device' },
         ]
       }
     ],

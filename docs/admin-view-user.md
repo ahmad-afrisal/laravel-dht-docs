@@ -93,7 +93,7 @@ Agar menu "Pengguna" hanya muncul di layar Admin, kita gunakan directive `@role`
 
 ```
 
-![Deskripsi Gambar](/images/admin-user-2.png)
+![Deskripsi Gambar](/images/admin-user-2.2.png)
 
 
 ## Langkah 4: Konfigurasi Tailwind Safelist
@@ -107,12 +107,16 @@ export default {
     ],
     // Menjamin class tetap ada meskipun tidak tertulis langsung di file Blade
     safelist: [
+        'bg-blue-500',
+        'bg-blue-700',
         'bg-gray-500',
         'bg-gray-700',
         'bg-red-500',
         'bg-red-700',
-        'bg-blue-500',
-        'bg-blue-700',
+        'bg-cyan-500',
+        'bg-cyan-700',
+        'bg-yellow-500',
+        'bg-yellow-600'
     ],
     theme: {
         extend: {
