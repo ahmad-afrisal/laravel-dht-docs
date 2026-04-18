@@ -12,7 +12,7 @@ See the `Prerequisites` documentation page for compatibility details.
 3. You can install the package via composer:
 
  ```bash 
- composer require spatie/laravel-permission`
+ composer require spatie/laravel-permission
  ```
 
 ![Deskripsi Gambar](/images/yajra-1.png)
