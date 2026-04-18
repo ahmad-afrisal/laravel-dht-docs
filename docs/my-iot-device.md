@@ -36,14 +36,13 @@ class MyIotDeviceController extends Controller
     /**
      * Menampilkan detail perangkat tertentu.
      */
-    public function show(IotDevice $my_iot_device)
+     public function show($id)
     {
-        // Proteksi: Pastikan perangkat ini memang milik user yang login
-        if ($my_iot_device->user_id !== Auth::id()) {
-            abort(403, 'Aksi tidak diizinkan.');
-        }
+        // Ambil data berdasarkan ULID
+        $device = IotDevice::findOrFail($id);
 
-        return view('user.my-device.show', compact('my_iot_device'));
+        // Kirim ke view. Pastikan namanya 'device' (tanpa $)
+        return view('user.my-device.show', compact('device'));
     }
 }
 

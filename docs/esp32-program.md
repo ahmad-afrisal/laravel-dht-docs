@@ -1,4 +1,4 @@
-#
+# ESP32 Program
 
 ## Buka VScode
 ![Deskripsi Gambar](/images/esp32-program-0.png)
@@ -110,11 +110,11 @@ Hubungkan nodemcu dengan kombuter, auntuk upload program
 dengang rangkaian sebagai berikut
 
 1. Build Program
-![Deskripsi Gambar](/images/esp32-program-7.png)
-
-2. Upload Program
 ![Deskripsi Gambar](/images/esp32-program-8.png)
 
-3. Cek di Serial Monitor
+2. Upload Program
 ![Deskripsi Gambar](/images/esp32-program-9.png)
+
+3. Cek di Serial Monitor
+![Deskripsi Gambar](/images/esp32-program-10.png)
 

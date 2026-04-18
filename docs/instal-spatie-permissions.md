@@ -11,7 +11,9 @@ See the `Prerequisites` documentation page for compatibility details.
 
 3. You can install the package via composer:
 
- `composer require spatie/laravel-permission`
+ ```bash 
+ composer require spatie/laravel-permission`
+ ```
 
 ![Deskripsi Gambar](/images/yajra-1.png)
 
@@ -20,7 +22,9 @@ See the `Prerequisites` documentation page for compatibility details.
 
 5. You should publish the migration and the `config/permission.php` config file with:
 
-`php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"`
+```bash
+php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+```
 
 ![Deskripsi Gambar](/images/yajra-2.png)
 
@@ -39,16 +43,22 @@ If you are using CACHE_STORE=database, be sure to install Laravel's cache migrat
 
 7. Clear your config cache. This package requires access to the permission config settings in order to run migrations. If you've been caching configurations locally, clear your config cache with either of these commands:
 
- `php artisan optimize:clear`
+ ```bash 
+ php artisan optimize:clear
+ ```
   or
- `php artisan config:clear`
+ ```bash 
+ php artisan config:clear
+ ```
 
 ![Deskripsi Gambar](/images/yajra-3.png)
 
 
 8. Run the migrations: After the config and migration have been published and configured, you can create the tables for this package by running:
 
- `php artisan migrate`
+ ```bash
+ php artisan migrate
+ ```
 
 ![Deskripsi Gambar](/images/yajra-4.png)
 

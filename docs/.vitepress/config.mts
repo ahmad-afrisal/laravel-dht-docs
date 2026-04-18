@@ -33,10 +33,10 @@ export default defineConfig({
         items: [
           { text: 'Menampilkan Perangkat Saya', link: '/my-iot-device' },
           { text: 'Instal Laravel Reverb', link: '/instal-laravel-reverb' },
-          { text: 'Detail Monitoring', link: '/instal-laravel-reverb' },
+          { text: 'Detail Monitoring', link: '/detail-monitoring' },
           { text: 'Cek IP Lokal', link: '/check-ip-local' },
           { text: 'ESP32 Program', link: '/esp32-program' },
-          { text: 'Uji Sistem', link: '/sytem-testing' },
+          { text: 'Uji Sistem', link: '/system-testing' },
           { text: 'ShouldBroadcastNow', link: '/shouldbroadcast-vs-shouldboradcastnow' },
           // Tambahkan item Part 2 di sini
         ],
