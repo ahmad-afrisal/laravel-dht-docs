@@ -1,8 +1,9 @@
-# Buat Halaman Detail Monitoring
+# Membuat Halaman Monitoring Real-Time
+Halaman ini berfungsi untuk menampilkan data dari sensor DHT22 secara langsung tanpa perlu refresh halaman, menggunakan teknologi **Laravel Reverb (WebSockets)** dan **Laravel Echo**.
 
 
-## buat file show.blade.php
-
+## 1. Persiapan Struktur Blade
+Buat file baru di `resources/views/user/my-device/show.blade.php`. Kita menggunakan Layout Component (`<x-app-layout>`) untuk menjaga konsistensi tampilan dengan dashboard Laravel lainnya.
 
 ```php
 <x-app-layout>
@@ -65,6 +66,19 @@
     </main>
 </x-app-layout>
 
-
-
 ```
+
+
+![Deskripsi Gambar](/images/detail-monitoring-1.png)
+
+
+##  2. Implementasi UI (Frontend)
+Kita menggunakan **Tailwind CSS** untuk membuat tampilan kartu (cards) yang bersih:
+- **Grid System**: Membagi layar menjadi dua kolom untuk Suhu dan Kelembapan.
+- **Warna Kontras**: Biru (bg-blue-100) untuk suhu dan Hijau (bg-green-100) untuk kelembapan agar mudah dibedakan secara visual.
+- **ID Selector**: Memberikan id="temp-display" dan id="hum-display" pada tag `<span></span>` agar JavaScript bisa mengubah angkanya secara dinamis.
+
+## 3. Integrasi Laravel Echo (The "Magic")
+Bagian terpenting adalah skrip JavaScript di dalam `<x-slot name="script">`. Berikut adalah penjelasan alurnya:
+
+

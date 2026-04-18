@@ -82,14 +82,10 @@ class DatabaseSeeder extends Seeder
 ```
 
 ## Langkah 4: Menjalankan Seeder
-Ada dua cara untuk menjalankan seeder yang telah kita buat:
 
 ### Menjalankan secara spesifik (Hanya UserTableSeeder):
 
-`php artisan db:seed UserTableSeeder`
+```bash
+php artisan db:seed UserTableSeeder
+```
 
-### Menjalankan seluruh seeder (Sesuai urutan di DatabaseSeeder):
-
-`php artisan db:seed`
-
-Jika berhasil, Anda akan melihat pesan sukses di terminal, dan tabel users Anda kini telah terisi dengan data yang siap digunakan untuk pengembangan.

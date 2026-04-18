@@ -26,10 +26,18 @@ Jika Anda ingin mengubah pengaturan default (seperti menyembunyikan tab tertentu
 ![Deskripsi Gambar](/images/debugbar-2.png)
 
 
-Setelah menjalankan, file baru akan muncul di `config/debugbar.php`
 
 ## Langkah 4: Cara Penggunaan
-Setelah instalasi selesai, cukup buka aplikasi Laravel Anda di browser. Anda akan melihat bilah alat (toolbar) kecil di bagian bawah layar.
+Setelah instalasi selesai, cukup buka aplikasi Laravel Anda di browser. dengan cara menjalankan perintah
+```bash
+php artisan serv
+```
+dan diterminal lain
+```bash
+npm run dev
+```
+
+ Anda akan melihat bilah alat (toolbar) kecil di bagian bawah layar.
 
 ![Deskripsi Gambar](/images/debugbar-3.png)
 

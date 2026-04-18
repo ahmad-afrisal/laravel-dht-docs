@@ -3,7 +3,7 @@
 ## Langkah 1 :  Install & Setup Realtime (Laravel Reverb)
 
 ```bash 
-php artisan install:broadcasting`
+php artisan install:broadcasting
 ```
 
 Pilih `Reverb` saat muncul pilihan.
