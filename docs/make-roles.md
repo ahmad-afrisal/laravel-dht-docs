@@ -96,6 +96,6 @@ class DatabaseSeeder extends Seeder
 4. Menjalankan seeder secara spesifik (Hanya RolePermissionTableSeeder):
 
 ```bash
-php artisan db:seed RolePermissionTableSeeder
+php artisan db:seed RolePermissionSeeder
 ```
 
