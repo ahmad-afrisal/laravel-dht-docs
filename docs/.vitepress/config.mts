@@ -28,14 +28,16 @@ export default defineConfig({
         ],
       },
       {
-        text: 'Pertemuan 2 - 17/04/2026',
+        text: 'XXX ON PROGRESS XXX',
         collapsed: false,
         items: [
           { text: 'Menampilkan Perangkat Saya', link: '/my-iot-device' },
           { text: 'Instal Laravel Reverb', link: '/instal-laravel-reverb' },
           { text: 'Detail Monitoring', link: '/instal-laravel-reverb' },
+          { text: 'Cek IP Lokal', link: '/check-ip-local' },
           { text: 'ESP32 Program', link: '/esp32-program' },
-            { text: 'ShouldBroadcastNow', link: '/shouldbroadcast-vs-shouldboradcastnow' },
+          { text: 'Uji Sistem', link: '/sytem-testing' },
+          { text: 'ShouldBroadcastNow', link: '/shouldbroadcast-vs-shouldboradcastnow' },
           // Tambahkan item Part 2 di sini
         ],
       }

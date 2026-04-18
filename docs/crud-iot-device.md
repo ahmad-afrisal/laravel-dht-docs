@@ -209,7 +209,7 @@ class IotDeviceController extends Controller
                 ->make(true);
         }
 
-        return view('iot-device.index');
+        return view('admin.iot-device.index');
     }
 
     /**
@@ -219,7 +219,7 @@ class IotDeviceController extends Controller
     {
         $users = User::role('user')->pluck('name', 'id');
 
-        return view('iot-device.create', compact('users'));
+        return view('admin.iot-device.create', compact('users'));
     }
 
     /**
