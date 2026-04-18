@@ -106,10 +106,18 @@ void loop() {
 
 ```
 
-Hubungkan nodemcu dengan kombuter, auntuk upload program
-dengang rangkaian sebagai berikut
+Hubungkan nodemcu dengan komputer, untuk upload program dengang rangkaian sebagai berikut
 
-Skema Pinout ESP32 ke DHT11/22Sensor DHT biasanya memiliki 3 atau 4 pin (VCC, Data, NC, GND). Pada ESP32, kita akan menggunakan pin GPIO 4 (D4) sebagai pin data karena lokasinya yang mudah dijangkau.Pin DHT11/22Pin ESP32KeteranganVCC3V3 atau VinGunakan 3V3 jika kabel pendek, Vin jika kabel panjang (>2 meter)DataGPIO 4 (D4)Pin komunikasi dataGNDGNDGround (Negatif)
+### Skema Pinout ESP32 ke DHT11/22
+Sensor DHT biasanya memiliki 3 atau 4 pin (VCC, Data, NC, GND). Pada ESP32, kita akan menggunakan pin GPIO 4 (D4) sebagai pin data karena lokasinya yang mudah dijangkau.
+
+| Pin DHT11/22 | Pin ESP32 | Keterangan |
+| :--- | :--- | :--- |
+| VCC3 | V3 atau Vin | Gunakan 3V3 jika kabel pendek, Vin jika kabel panjang (>2 meter)|
+| Data | GPIO 4 (D4) | Pin komunikasi data|
+| GND | GND | Ground (Negatif) |
+
+
 
 1. Build Program
 ![Deskripsi Gambar](/images/esp32-program-8.png)
