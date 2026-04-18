@@ -284,7 +284,7 @@ Tambahkan link pada file   `navigation.blade.php`:
                     {{ __('Pengguna') }}
                 </x-nav-link>
             </div>
-        // Menu Perangkat
+
             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                 <x-nav-link :href="route('iot-devices.index')" :active="request()->routeIs('iot-devices*')">
                     {{ __('Perangkat') }}

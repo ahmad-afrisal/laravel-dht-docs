@@ -81,4 +81,17 @@ Kita menggunakan **Tailwind CSS** untuk membuat tampilan kartu (cards) yang bers
 ## 3. Integrasi Laravel Echo (The "Magic")
 Bagian terpenting adalah skrip JavaScript di dalam `<x-slot name="script">`. Berikut adalah penjelasan alurnya:
 
+### A. Berlangganan ke Channel
 
+```javascript
+window.Echo.channel('device.{{ $device->id }}')
+```
+Sistem akan "mendengarkan" siaran data khusus untuk ID perangkat yang sedang dibuka. Ini mencegah data dari perangkat lain tertukar.
+
+### B. Mendengarkan Event
+```javascript
+.listen('.sensor.updated', (e) => { ... })
+```
+- **Penting**: Tanda titik `.` di depan nama event (`.sensor.updated`) digunakan jika Anda mendefinisikan nama event secara kustom di Laravel (Broadcast As).
+
+- **Update DOM**: Ketika data baru tiba dari ESP32 melalui Reverb, fungsi ini akan menangkap objek `e` dan langsung menuliskannya ke elemen HTML kita.

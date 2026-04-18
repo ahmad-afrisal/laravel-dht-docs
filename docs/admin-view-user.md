@@ -127,6 +127,9 @@ export default {
 
 ```
 
+![Deskripsi Gambar](/images/tailwind-config-safelist.png)
+
+
 ## Langkah 5: Buat View
 Buat view dengan nama `index.blade.php` untuk menampilkan seluruh data user/pengguna di folder `resources/views/admin/user`,
 
