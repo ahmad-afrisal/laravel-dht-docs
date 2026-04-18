@@ -19,7 +19,6 @@ Buka file `UserTableSeeder.php` yang baru saja dibuat, lalu sesuaikan kodenya me
 namespace Database\Seeders;
 
 use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class UserTableSeeder extends Seeder

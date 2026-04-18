@@ -32,7 +32,10 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'Menampilkan Perangkat Saya', link: '/my-iot-device' },
-          { text: 'Integrasi MQTT', link: '/mqtt-setup' },
+          { text: 'Instal Laravel Reverb', link: '/instal-laravel-reverb' },
+          { text: 'Detail Monitoring', link: '/instal-laravel-reverb' },
+          { text: 'ESP32 Program', link: '/esp32-program' },
+            { text: 'ShouldBroadcastNow', link: '/shouldbroadcast-vs-shouldboradcastnow' },
           // Tambahkan item Part 2 di sini
         ],
       }

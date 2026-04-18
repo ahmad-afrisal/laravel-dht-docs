@@ -174,6 +174,9 @@ Buat file di `resources/views/user/my-device/index.blade.php`:
 
 ```
 
+![Deskripsi Gambar](/images/crud-my-device-2.png)
+
+
 ### Tips Pengembangan:
 1. Keamanan: Pada method show, sangat penting untuk mengecek user_id. Jika tidak, user bisa menebak ID perangkat orang lain di URL dan melihat datanya.
 2. UI/UX: Penggunaan @forelse sangat disarankan daripada @foreach agar kamu bisa menampilkan pesan "Data Kosong" jika user belum memiliki perangkat sama sekali.
