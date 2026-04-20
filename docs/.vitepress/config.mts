@@ -2,6 +2,10 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+// Tambahkan ini agar path CSS/JS tidak pecah saat di-deploy
+  // Sesuaikan dengan nama repository Anda di GitHub
+  base: '/laravel-dht-docs/',
+
   title: "Laravel 13 DHT",
   description: "The Next of IoT",
   themeConfig: {
