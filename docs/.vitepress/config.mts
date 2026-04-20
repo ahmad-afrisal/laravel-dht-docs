@@ -28,7 +28,7 @@ export default defineConfig({
         ],
       },
       {
-        text: 'XXX ON PROGRESS XXX',
+        text: 'Pertemuan 2 - 17/04/2026',
         collapsed: false,
         items: [
           { text: 'Menampilkan Perangkat Saya', link: '/my-iot-device' },

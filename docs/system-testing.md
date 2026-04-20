@@ -1,6 +1,5 @@
 # Panduan Menjalankan Sistem Monitoring IoT (Laravel + Reverb + ESP32)
-Agar sistem berjalan dengan sempurna, kamu perlu membuka **tiga terminal** secara bersamaan. Berikut adalah fungsinya masing-masing:
-Anda hanya butuh 3 terminal ini saja:
+Agar sistem berjalan dengan sempurna, pastikan komputer(laravel) dan NodeMcu berada dalam **jaringan (WiFi) yang sama**. setlah itu kamu perlu membuka **tiga terminal** secara bersamaan. Berikut adalah fungsinya masing-masing:
 
 ## 1. Terminal 1: Backend & API (Laravel Server)
 ```bash

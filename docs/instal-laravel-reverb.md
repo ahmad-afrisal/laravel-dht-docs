@@ -142,6 +142,59 @@ Route::post('/update-sensor', [DeviceApiController::class, 'update']);
 
 ![Deskripsi Gambar](/images/laravel-reverb-3.png)
 
+kemudian pada file `bootstrap/app.php`, tambahkan kode seperti dibawah ini :
+`api: __DIR__.'/../routes/api.php',` sehingga menjadi seperti ini :
+
+
+```php
+<?php
+
+use Illuminate\Foundation\Application;
+use Illuminate\Foundation\Configuration\Exceptions;
+use Illuminate\Foundation\Configuration\Middleware;
+
+return Application::configure(basePath: dirname(__DIR__))
+    ->withRouting(
+        channels: __DIR__.'/../routes/channels.php',
+        web: __DIR__ . '/../routes/web.php',
+        api: __DIR__.'/../routes/api.php', // <--- Pastikan baris ini ada
+        commands: __DIR__ . '/../routes/console.php',
+        health: '/up',
+    )
+    ->withMiddleware(function (Middleware $middleware): void {
+        $middleware->alias([
+            'role' => \Spatie\Permission\Middleware\RoleMiddleware::class,
+            'permission' => \Spatie\Permission\Middleware\PermissionMiddleware::class,
+            'role_or_permission' => \Spatie\Permission\Middleware\RoleOrPermissionMiddleware::class,
+        ]);
+    })
+    ->withExceptions(function (Exceptions $exceptions): void {
+        //
+    })->create();
+
+```
+
+
+dan terakhir modfikasi juga file `app.js` yang terletak pada folder `resources/js` menjadi :
+
+```php
+import axios from 'axios';
+window.axios = axios;
+
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+/**
+ * Echo exposes an expressive API for subscribing to channels and listening
+ * for events that are broadcast by Laravel. Echo and event broadcasting
+ * allow your team to quickly build robust real-time web applications.
+ */
+
+import './echo'; // tambahkan ini
+
+
+
+```
+
 
 
 ## Ringkasan Langkah Jika File Routes Tidak Ada:
