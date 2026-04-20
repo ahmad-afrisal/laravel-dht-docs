@@ -27,7 +27,9 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .vitepress/dist # Folder hasil build default VitePress
+          # POIN PENTING: Jika folder .vitepress ada di dalam folder docs, 
+          # maka path-nya harus mengarah ke docs/.vitepress/dist
+          path: docs/.vitepress/dist
 
   deploy:
     environment:
