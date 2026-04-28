@@ -44,6 +44,15 @@ export default defineConfig({
           { text: 'ShouldBroadcastNow', link: '/shouldbroadcast-vs-shouldboradcastnow' },
           // Tambahkan item Part 2 di sini
         ],
+      },
+      {
+        text: 'Pertemuan 3 - 24/04/2026',
+        collapsed: false,
+        items: [
+          { text: 'Buat Akun EMQX Cloud', link: '/new-account-emqx-cloud' },
+          { text: 'Setup Laravel MQTT & Reverb', link: '/laravel-mqtt' },
+
+        ],
       }
     ],
 
