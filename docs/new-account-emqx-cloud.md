@@ -1,6 +1,5 @@
 # Buat Akun EMQX Cloud
 
-## Langkah 1 : Kunjungi Halaman EMXQ Cloud
 1. Kunjungi Halaman resmi EMQX CLOUD di https://www.emqx.com/en
 
 ![Deskripsi Gambar](/images/emqx-1.png)

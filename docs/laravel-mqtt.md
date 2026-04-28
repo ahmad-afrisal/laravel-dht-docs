@@ -11,22 +11,18 @@ composer require php-mqtt/laravel-client
 ```
 
 ![Deskripsi Gambar](/images/emqx-22.png)
-Tutorial yang bagus! Struktur kodenya sudah solid dan sangat fungsional. Karena Anda ingin mempublikasikannya di WordPress, ada beberapa hal yang bisa ditingkatkan untuk meningkatkan keterbacaan (readability), keamanan, dan pengalaman pengguna saat mengikuti panduan ini.
 
-Berikut adalah versi tutorial yang telah disempurnakan:
-
-Real-Time Dashboard IoT: Integrasi Laravel, MQTT (EMQX), dan Reverb
-Tutorial ini akan memandu Anda menghubungkan perangkat ESP32 ke Laravel menggunakan protokol MQTT untuk pembaruan data secara real-time melalui Laravel Reverb.
-
-1. Persiapan Environment Laravel
-Pertama, instal library php-mqtt agar Laravel dapat bertindak sebagai subscriber.
-
-Bash
-composer require php-mqtt/laravel-client
 Setelah instalasi, publish file konfigurasi untuk menyesuaikan pengaturan koneksi nanti:
 
+```bash
+php artisan vendor:publish --provider="PhpMqtt\Client\MqttClientServiceProvider"
+```
 
-## Edit `.env`
+
+### Konfigurasi `.env`
+Tambahkan kredensial MQTT Broker Anda (misalnya EMQX Cloud) ke dalam file `.env`.
+
+Pastikan file sertifikat CA diletakkan di folder storage/app/private/ agar tidak bisa diakses langsung via web browser.
 
 ```php
 
@@ -40,8 +36,8 @@ MQTT_TLS_CA_FILE=storage/app/private/mqtt/emqxsl-ca.crt
 
 ```
 
-## Buat "The Bridge" (MQTT Listener)
-Buat perintah Artisan yang akan berjalan di background untuk menangkap data.
+## 2. Membuat "The Bridge" (MQTT Listener)
+Buat perintah Artisan yang akan berjalan berjalan terus-menerus di background untuk mendengarkan pesan dari broker.
 
 ```bash
 php artisan make:command MqttListener
@@ -102,14 +98,12 @@ class MqttListener extends Command
 }
 
 
-
-
 ```
+Kode ini menangkap data, menyimpannya ke database, dan langsung mem-broadcast-nya melalui Laravel Reverb.
 
+## 3. Konfigurasi Broadcasting (Reverb)
 
-
-
-Selanjutnya ubah file `routes/channels.php` menjadi 
+Agar data bisa diterima oleh Dashboard (Frontend), kita perlu mendaftarkan *Private Channel* di `routes/channels.php`:
 
 
 ```php
@@ -121,6 +115,7 @@ use App\Models\IotDevice;
 
 // // Jika menggunakan Opsi B (Channel Device)
 Broadcast::channel('device.{deviceId}', function ($deviceId) {
+  // Logika otorisasi: pastikan user memiliki akses ke device ini
     return IotDevice::where('id', $deviceId)
         ->exists();
 });
@@ -130,10 +125,21 @@ Broadcast::channel('device.{deviceId}', function ($deviceId) {
 
 
 
-Update Kode Program untuk NodeMcu menjadi sebagai berikut
 
 
-pada file `src/main.cpp`
+## 4. Setup Perangkat (ESP32 & DHT22)
+Gunakan **PlatformIO** untuk mengelola library. Tambahkan dependency berikut pada `platformio.ini`:
+
+```cpp
+lib_deps =
+    knolleary/PubSubClient @ ^2.8
+    adafruit/DHT sensor library
+    adafruit/Adafruit Unified Sensor
+
+
+```
+### Kode Utama ESP32 (src/main.cpp)
+Berikut adalah kode untuk membaca sensor DHT22 dan mengirimkannya ke topik yang sesuai dengan ID di Laravel.
 
 ```cpp
 #include <Arduino.h>
@@ -241,21 +247,9 @@ void loop() {
 
 ```
 
-pada file `platformio.ini`
-```cpp
-lib_deps =
-    knolleary/PubSubClient @ ^2.8
-    adafruit/DHT sensor library
-    adafruit/Adafruit Unified Sensor
+## 5. Menjalankan Sistem
+Untuk memulai sinkronisasi data dari perangkat ke dashboard, jalankan perintah ini di server Laravel Anda:
 
-
-```
-
-
-jangan lupa di build dan di upload ulang ke NodeMcu Esp32.
-
-
-Untuk menjalankan MQTT nya gunakan perintah
 
 ```bash
 
