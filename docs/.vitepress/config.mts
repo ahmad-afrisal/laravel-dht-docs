@@ -51,6 +51,14 @@ export default defineConfig({
         items: [
           { text: 'Buat Akun EMQX Cloud', link: '/new-account-emqx-cloud' },
           { text: 'Setup Laravel MQTT & Reverb', link: '/laravel-mqtt' },
+        ],
+      },
+      {
+        text: 'Pengujian Perangkat Lunak',
+        collapsed: false,
+        items: [
+          { text: 'Jenis Jenis Pengujian', link: '/types-of-software-testing' },
+          { text: 'Unit Testing', link: '/unit-testing' },
 
         ],
       }
