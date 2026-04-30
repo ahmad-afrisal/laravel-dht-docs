@@ -26,6 +26,21 @@ Kemudian akan muncul beberapa pertanyaan, Silahkan diikuti seperti ini,
 
 ## Error yang mungkin terjadi
 
+![Deskripsi Gambar](/images/breeze-error.jpeg)
+
+Ketika teman-teman mendapati error seperti di atas, tidak perlu khawatir, anda hanya perlu membuat file `bootstrap.js` di dalam folder `resources/js` dengan isi file tersebut seperti ini :
+
+```php
+import axios from 'axios';
+window.axios = axios;
+
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+
+```
+
+![Deskripsi Gambar](/images/error-breeze-1.png)
+
 ![Deskripsi Gambar](/images/axios.png)
 
 Jika mendapatkan error seperti gambar diatas, cukup jalankan command dibawah ini di terminal
