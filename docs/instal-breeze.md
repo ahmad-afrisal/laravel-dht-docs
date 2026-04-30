@@ -41,9 +41,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 ![Deskripsi Gambar](/images/error-breeze-1.png)
 
-![Deskripsi Gambar](/images/axios.png)
 
-Jika mendapatkan error seperti gambar diatas, cukup jalankan command dibawah ini di terminal
+lalu jalankan perintah di bawah ini diterminal
 
 ```bash
 npm instal axios
